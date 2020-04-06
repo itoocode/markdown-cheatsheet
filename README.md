@@ -329,12 +329,12 @@ Task lists allow you to create a list of items with checkboxes. In Markdown appl
 
 ```md
 - [x] learn md
-- [x] code 
+- [ ] code 
 - [x] learn html and css
 ```
 
 - [x] learn md
-- [] code 
+- [ ] code 
 - [x] learn html and css
 
 
