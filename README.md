@@ -2,7 +2,7 @@
 
 ## Markdown Basics
 
-###### Headlines, Paragraphs, and Basic formatting
+### Headlines, Paragraphs, and Basic formatting
 ---
 ### Headlines
 
@@ -12,6 +12,16 @@
 #### headline/header tag level 4
 ##### headline/header tag level 5
 ###### headline/header tag level 6
+
+```md
+hash(#) space title i.e. # Title
+# headline one # level 1
+## headline/header tag level 2
+### headline/header tag level 3
+#### headline/header tag level 4
+##### headline/header tag level 5
+###### headline/header tag level 6
+```
 
 ## Paragraphs and line breaks
 
@@ -30,17 +40,27 @@ Normal para --------atque eos repellat corrupti itaque? Praesentium eveniet inci
 
 ### Emphasis and Bolding
 
-### Italics
+### Italics 
 
 This *works* and this _works_ too. But use  1 asterisk(*) to italize , its preferred but github uses only * so be consistant with asterist .
+
+```md
+use *lorem* or _lorem_
+
+This *works* and this _works_ too. But use  1 asterisk(*) to italize , its preferred but github uses only * so be consistant with asterist .
+```
 
 ### Bolding
 
 This **works** and this __works__ too. But use two asterisks
 
+```md
+This **works** and this __works__ too. But use two asterisks
+```
 
 
-### Blockquotes
+
+### Blockquotes (> quote)
 
 > this is a quote
 >
@@ -48,12 +68,33 @@ This **works** and this __works__ too. But use two asterisks
 >
 >
 
+```md
+> this is a quote
+>
+> this is continuation of quote sequi aut quia! repellat corrupti itaque? Praesentium eveniet incidunt sequi aut quia!repellat corrupti itaque. - by [Google](http://google.com "link to google")
+>
+>
+```
+
+```md
+```
+
 > other quote -- by name
+
+```md
+> other quote -- by name
+```
 
 ### Horizontal lines/rules(---)  
 ---
 ___
 ***
+
+```md
+---
+___
+***
+```
 
 ### Lists
 
@@ -62,6 +103,12 @@ ___
 1. one
 2. two
 3. three
+
+```md
+1. one
+2. two
+3. three
+```
 
 ---
 
@@ -73,7 +120,15 @@ ___
    3. inter
 2. inn
 
-
+```md
+1. other list
+   1. inner list
+   2. inter
+      1. more inner
+      2. other  
+   3. inter
+2. inn
+```
 
 ---
 
@@ -81,7 +136,13 @@ ___
 
 * one
 * two
+* three
 
+```md
+* one
+* two
+* three
+```
 
 * blue 
 * green
@@ -91,6 +152,17 @@ ___
 * red
 * yellow
 * ***Bulleted, italic, bold***
+
+```md
+* blue 
+* green
+  * other
+  * abcd
+  * iddf
+* red
+* yellow
+* ***Bulleted, italic, bold***
+```
 
 *Italicized text*
 *Item with no formating
@@ -113,13 +185,16 @@ ___
 
 To install the latest version of NPM, you can type, `npm install npm@latest -g`
 
-for block of code use three backtics
+for block of code use three backtics 
+
 
 ```
     let addNums = (a, b) => {
         return a + b;
     }
 ```
+
+Code with syntax highlight use three backtics with lang
 
 ```javascript
 
@@ -135,8 +210,6 @@ for block of code use three backtics
   "age": 25
 }
 ```
-
-
 
 
 ```css
@@ -160,6 +233,12 @@ four spaces for code like
 
 ### Links
 
+```md
+[Google](http://google.com)
+link with title by " "
+[Google](http://google.com "link to google")
+```
+
 [Google](http://google.com)
 link with title by " "
 [Google](http://google.com "link to google")
@@ -167,19 +246,42 @@ link with title by " "
 
 ### Images
 
+```md
 ![kittens](http://placekitten.com/400/200 "img title")
 
 [![kitten](http://placekitten.com/200/300 "img alt text") ](http://google.com "link to google")
+```
+
+![kittens](http://placekitten.com/400/200 "img title")
+
+[![kitten](http://placekitten.com/200/300 "img alt text")](http://google.com "link to google")
 
 ---
 ### Extendend syntax
 
 #### *Tables*
 
+```md
 | Syntax | Description |
 | --- | ----------- |
 | Header | Title |
 | Paragraph | Text |
+```
+
+| Syntax | Description |
+| --- | ----------- |
+| Header | Title |
+| Paragraph | Text |
+
+
+```md
+with alignment by :---(left), :---:(center), :---(right)
+| name | age | address |
+| :--- | :---: | ---: |
+| mahesh | 20 | hyd |
+| ram | 21 | hyd |
+| john | 22 | hyd |
+```
 
 with alignment by :---(left), :---:(center), :---(right)
 | name | age | address |
@@ -196,9 +298,23 @@ You can link to headings with custom IDs in the file by creating a standard link
 
 lorem ipsum doler set amet [html](#html-link)
 
+```md
+##### html {#html-link}
+
+Goto [html](#html-link)
+```
 
 #### Definition Lists
 Some Markdown processors allow you to create definition lists of terms and their corresponding definitions. To create a definition list, type the term on the first line. On the next line, type a colon followed by a space and the definition.
+
+```md
+First Term
+: This is the definition of the first term.
+
+Second Term
+: This is one definition of the second term.
+: This is another definition of the second term.
+```
 
 First Term
 : This is the definition of the first term.
@@ -211,9 +327,15 @@ Second Term
 #### Task Lists
 Task lists allow you to create a list of items with checkboxes. In Markdown applications that support task lists, checkboxes will be displayed next to the content. To create a task list, add dashes (-) and brackets with a space ([ ]) in front of task list items. To select a checkbox, add an x in between the brackets ([x]).
 
-- [x] Write the press release
-- [x] Update the website
-- [x] Contact the media
+```md
+- [x] learn md
+- [x] code 
+- [x] learn html and css
+```
+
+- [x] learn md
+- [] code 
+- [x] learn html and css
 
 
 ---
